@@ -32,8 +32,8 @@ class HomePage extends StatelessWidget {
                     style: TextStyle(color: Colors.blueGrey, fontSize: 30),
                   );
                 } else if (state is CounterValueChangesState) {
-                  return Text(
-                    state.Counter.toString(),
+                  return Text(  
+                    state.Counter.toString() ,
                     style:
                         const TextStyle(color: Colors.blueGrey, fontSize: 30),
                   );

@@ -21,7 +21,7 @@ class ButtonsWidget extends StatelessWidget {
         ),
         FloatingActionButton(
           onPressed: () {
-            BlocProvider.of<CounterBloc>(context).add(DecreamentEvent());
+            BlocProvider.of<CounterBloc>(context).add(RestEvent());
           },
           child: const Icon(Icons.exposure_zero),
         ),
@@ -31,7 +31,7 @@ class ButtonsWidget extends StatelessWidget {
         FloatingActionButton(
           onPressed: () {
             // BlocProvider.of<CounterBloc>(context).add(RestEvent());
-            context.read<CounterBloc>().add(RestEvent());
+            context.read<CounterBloc>().add(DecreamentEvent());
           },
           child: const Icon(Icons.remove),
         ),
