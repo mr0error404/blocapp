@@ -7,10 +7,17 @@ class CounterBloc extends Bloc<CounterEvent, CounterState> {
   int counter = 0;
   CounterBloc() : super(CounterInitial()) {
     on<IncreamentEvent>(((event, emit) {
-      emit(CounterValueChangesState(Counter: ++counter));
+      ++counter;
+      if (counter <= 5)
+        counter = counter;
+      else
+        counter = 5;
+      emit(CounterValueChangesState(Counter: counter));
     }));
     on<DecreamentEvent>(((event, emit) {
-      emit(CounterValueChangesState(Counter: --counter));
+      --counter;
+      if (counter <= 0) counter = 0;
+      emit(CounterValueChangesState(Counter: counter));
     }));
     on<RestEvent>(((event, emit) {
       counter = 0;
