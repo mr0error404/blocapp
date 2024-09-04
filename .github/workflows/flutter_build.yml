@@ -14,9 +14,9 @@ jobs:
       uses: actions/checkout@v3
 
     - name: Set up Flutter
-      uses: subosito/flutter-action@v3
+      uses: subosito/flutter-action@v2
       with:
-        flutter-version: '3.22.2' # استخدم النسخة المناسبة من Flutter
+        flutter-version: '3.22.2'  # أو النسخة المناسبة من Flutter
 
     - name: Install dependencies
       run: flutter pub get
